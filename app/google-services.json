@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "608393805216",
+    "project_id": "jamanchu-b4726",
+    "storage_bucket": "jamanchu-b4726.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608393805216:android:2e395ddb3b5f5e3b72b8c5",
+        "android_client_info": {
+          "package_name": "com.autoever.jamanchu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMG3gnfRZPU_5KKEdkRqVq1_l0oyQ9d9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
