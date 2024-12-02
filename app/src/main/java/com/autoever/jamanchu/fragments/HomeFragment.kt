@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.autoever.jamanchu.R
 import com.autoever.jamanchu.models.User
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -94,8 +95,29 @@ class MyAdapter(private val users: List<User>) : RecyclerView.Adapter<MyAdapter.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = users[position]
-        holder.textViewNick.text = user.nickname
-        holder.textViewIntroduce.text = user.introduction
+        holder.textViewNick.text = user.nickname // 아이템 데이터 설정
+        holder.imageView.setImageResource(R.drawable.user)
+        Glide.with(holder.itemView.context)
+            .load(user.image) // 불러올 이미지의 URL 또는 URI
+            .placeholder(R.drawable.user)
+            .into(holder.imageView) // 이미지를 표시할 ImageView
+
+//        // 친구추가
+//        holder.buttonFriend.setOnClickListener {
+//            val auth = FirebaseAuth.getInstance()
+//            val currentUser = auth.currentUser
+//            val currentUserId = currentUser!!.uid // 현재 사용자 ID 가져오기
+//            addFriend(holder.itemView.context, currentUserId, user.id)
+//        }
+//
+//        // 채팅하기
+//        holder.buttonChat.setOnClickListener {
+//            val context = holder.itemView.context // Context 가져오기
+//            val intent = Intent(context, ChatActivity::class.java)
+//            // 채팅방 ID 전달
+//            intent.putExtra("otherUser", user.id)
+//            context.startActivity(intent) // Context를 사용해 startActivity 호출
+//        }
     }
 
     override fun getItemCount() = users.size

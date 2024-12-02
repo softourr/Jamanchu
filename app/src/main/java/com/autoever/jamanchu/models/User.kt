@@ -1,4 +1,4 @@
-package com.autoever.jamanchu.models
+package com.example.datingapp.models
 
 data class User(
     var id: String = "",
