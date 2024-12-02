@@ -51,6 +51,7 @@ dependencies {
 
     // 파이어베이스
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+    implementation("com.google.firebase:firebase-storage-ktx:21.0.1")
 
     // 바텀네비게이션
     implementation("com.google.android.material:material:1.12.0")
